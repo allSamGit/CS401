@@ -1,0 +1,279 @@
+
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+
+
+
+
+<title>Cooking With Sam</title>
+
+<script src="https://kit.fontawesome.com/13e368da76.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css"> 
+
+<link rel="stylesheet" href="radiobutton.css">
+
+</head>
+
+<body>
+
+
+
+<div style="overflow:auto">
+
+
+
+<button class="sign-button in" onclick="window.location.href = 'login.php'">sign in</button>
+<button class="sign-button up" onclick="window.location.href = 'signupForm.php'" >sign up</button>
+
+
+<div id="main">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="aboutUs.php" >About Us</a>
+  <a href="#Services">Services</a>
+  <a href="#Clients">Clients</a>
+  <a href="Contact.php">Contact</a>
+  
+</div>
+
+
+ <div>
+ 
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  
+  </div>
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+
+
+
+<div class="header">
+     <a href="index.php" title="sam cooking">
+    <img src="pics/Logo2.jpg"  class="img-responsive" alt="shape" title="logo homepage">
+      </a>
+  <h1>Welcome to Cooking with Sam</h1>
+</div>
+
+</div>
+
+	
+<!-- Navigation Bar -->
+
+
+<ul> 
+
+  <li <?php if($_SERVER['SCRIPT_NAME']=="/index.php") { ?>
+ class="active"   <?php   }  ?>><a href="index.php">Home</a></li>
+ 
+  <li <?php if($_SERVER['SCRIPT_NAME']=="/Image_Gallery.php") { ?>
+  <?php   }  ?>><a href="Image_Gallery.php">Image Gallery</a></li>
+  
+  
+  <li <?php if($_SERVER['SCRIPT_NAME']=="/Contact.php") { ?>
+ <?php   }  ?>><a href="Contact.php">Contact</a></li>
+  
+  <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/aboutUs.php") { ?>
+ <?php   }  ?>><a href="aboutUs.php">About Us</a></li>
+</ul>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  
+ <!--
+  <div class="rightcolumn">
+    <div class="card" >
+      <h2>About Me</h2>
+      <div class="fakeimg"  style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+ -->
+
+<div class="rightcolumn">
+	<div class="card" >
+	
+<form action="./Survey_Handler.php" method="post">
+
+<h5>Quick Survey</h5>
+
+<p><label class="Question">1.Which of these options you like the most?</p>
+ 
+ 
+<label class="container">One
+  <input name="food" type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Two
+  <input name="food" type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Three
+  <input name="food" type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Four
+  <input name="food" type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<hr>
+
+<p><label class="Question">2.Select multiple recipe?</p>
+ 
+ 
+<label class="container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Two
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Three
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Four
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<hr>
+
+<p><label class="Question">3.Which of these options you like the most?</p>
+ 
+ 
+<label class="container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Two
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Three
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Four
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<hr>
+
+<p><label class="Question">4.Which of these options you like the most?</p>
+ 
+ 
+<label class="container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Two
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Three
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Four
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<input type="submit" value="Submit">
+
+    </div>
+</div>
+
+<div class="footer">
+
+
+
+  <h2>Follow us on: </h2>
+  
+	<div class="icons">
+	<a href="http:www.facebook.com"> <i class="fab fa-facebook fa-3x"></i></a>
+	<a href="http:www.instagram.com"><i class="fab fa-instagram fa-3x" ></i></a>
+	<a href="#telegram"				><i class="fab fa-telegram fa-3x"></i></a>
+	</div>
+	
+</div>
+
+
+
+
+
+</body>
+
+
+
+</html>

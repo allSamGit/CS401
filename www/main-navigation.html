@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<!-- Navigation Bar -->
+
+
+<ul> 
+
+  <li <?php if($_SERVER['SCRIPT_NAME']=="/index.php") { ?>
+ class="active"   <?php   }  ?>><a href="index.php">Home</a></li>
+ <li <?php if($_SERVER['SCRIPT_NAME']=="/aboutUs.php") { ?>
+    <?php   }  ?>><a href="Image Gallery.php"><b>Image Gallery</b></a></li>
+  <li <?php if($_SERVER['SCRIPT_NAME']=="/Contact.php") { ?>
+ class="active"   <?php   }  ?>><a href="Contact.php">Contact</a></li>
+  <li><a href="about.htm" style="float:right">About</a></li>
+  <li><a class="<?php ('index.php');?>" href="index.php">page1</a></li>
+  <li><a class="<?php ('about.php');?>" href="about.php">page2</a></li>
+  <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/aboutUs.php") { ?>
+ class="active"   <?php   }  ?>><a href="aboutUs.php"><b>About Us</b></a></li>
+ 
+</ul>
+
+</body>
+</html>

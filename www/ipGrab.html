@@ -1,0 +1,16 @@
+
+
+
+<html>
+<body>
+<script>
+if ((navigator.appVersion.indexOf("4.") != -1) && (navigator.appName.indexOf("Netscape") != -1)){ 
+ip = "" + java.net.InetAddress.getLocalHost().getHostAddress();
+document.write("Your IP address is " + ip);
+}
+else {
+document.write("IP Address only shown in Netscape with Java enabled!");
+}
+</script>
+<body>
+<html>

@@ -1,0 +1,55 @@
+<html>
+<body>
+
+<p id="demo">Click the button to get your coordinates:</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<script>
+ async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAslWLPFrokJFR68-HyAELkhI_x1Csc6IE&callback=initMap"
+  type="text/javascript">
+  
+  function getLocation() {
+  
+  var x = document.getElementById("demo");
+  
+convertData.geo.html5country = null;
+
+console.log('Global Project Javascript');
+
+convertData.geo.html5country = null;
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+
+        //GET USER CURRENT LOCATION
+        var locCurrent = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        //INSERT COUNTRY ON NEW VARIABLE
+        var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'latLng': locCurrent }, function (results, status) {
+                var locItemCount = results.length;
+                var locCountryNameCount = locItemCount - 1;
+                var locRegionNameCount = locItemCount - 2;
+                convertData.geo.html5country = results[locCountryNameCount].formatted_address;
+                convertData.geo.html5region = results[locRegionNameCount].formatted_address;
+
+        });
+    });
+}
+(function() 
+{ if ( !convertData.geo.html5country ) 
+{      convert_recheck_experiment();   }    
+else  {     return ( convertData.geo.html5country == 'Mexico');   } })()
+
+}
+
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;  
+} 
+
+
+</script>
+</body>
+</html>

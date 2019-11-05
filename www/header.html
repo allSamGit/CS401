@@ -1,0 +1,35 @@
+<?php 
+if(session_status()==PHP_SESSION_NONE){
+session_start();
+}
+include('Session_helper.php');
+
+if(!isAccessGranted()){
+  $messages['messages']="You must login first.";
+  redirectError("login.php",$messages);
+}	
+?>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+
+<?php if(isAccessGranted()){?>
+<button class="sign-button in" onclick="window.location.href = 'logout_handler.php'"></a>Logout</button> 
+<?php } else{ ?>
+<button class="sign-button in" onclick="window.location.href = 'login.php'">sign in</button>
+<button class="sign-button up" onclick="window.location.href = 'signupForm.php'" >sign up</button>
+<?php } ?>
+
+     <a href="Index.php" title="sam cooking">
+    <img src="pics/Logo2.jpg" class="img-responsive" alt="shape" title="logo homepage">
+      </a>
+  <h1>Welcome to Cooking with Sam</h1>
+</div>
+
+</body>
+
+</html>
